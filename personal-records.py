@@ -1,6 +1,7 @@
 from datetime import date, datetime
 from garminconnect import Garmin
 from notion_client import Client
+from dotenv import load_dotenv
 import os
 
 def get_icon_for_record(activity_name):
@@ -235,6 +236,7 @@ def write_new_record(client, database_id, activity_date, activity_type, activity
         print(f"Error writing new record: {e}")
 
 def main():
+    load_dotenv()
     garmin_email = os.getenv("GARMIN_EMAIL")
     garmin_password = os.getenv("GARMIN_PASSWORD")
     notion_token = os.getenv("NOTION_TOKEN")

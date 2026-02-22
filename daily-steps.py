@@ -96,7 +96,7 @@ def main():
     garmin_email = os.getenv("GARMIN_EMAIL")
     garmin_password = os.getenv("GARMIN_PASSWORD")
     notion_token = os.getenv("NOTION_TOKEN")
-    database_id = os.getenv("NOTION_STEPS_DB_ID")
+    database_id = os.getenv("NOTION_DB_ID_STEPS")
 
     # Initialize Garmin client and login
     garmin = Garmin(garmin_email, garmin_password)
